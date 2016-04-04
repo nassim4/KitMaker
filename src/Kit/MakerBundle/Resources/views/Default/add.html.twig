@@ -1,0 +1,13 @@
+{{ form_start(form, { attr: { 'role': 'form' } }) }}
+<div class=''>
+{% for item in datos %}
+{{ form_widget(form) }}
+
+{% for key,value in campos %}
+    Key : {{ key }}
+    Value : {{ value }}
+{% endfor %}}
+
+{% endfor %}
+</div>
+{{ form_end(form) }}

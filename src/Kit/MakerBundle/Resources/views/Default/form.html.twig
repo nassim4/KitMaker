@@ -1,0 +1,49 @@
+{% extends 'KitMakerBundle::base.html.twig' %}
+
+{% block body %}
+<header>
+    <h1>Email Contact</h1>
+</header>
+
+
+<form action="{{ path('kit_maker_bienvenido') }}" method="post" {{ form_enctype(form) }} class="blogger">
+<fieldset>
+    
+    {{ form_errors(form) }}
+
+    <div class="blogger">
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+				    
+				    <!--<input type="text" class="form-control" id="username" name="_username" value="" placeholder="Nombre" required="required">
+				  </div>
+				  <div class="blogger">
+				    
+				    <input type="text" class="form-control" id="username" name="_useremail" value="" placeholder="email" required="required">
+				  </div>
+				  <div class="blogger">
+				    
+				    <input type="text" class="form-control" id="username" name="_usersubject" value="" placeholder="subject" required="required">
+				  </div>
+				  <div  class="blogger">
+				    
+				    <textarea type="text" class="blogger" id="_userbody" name="_userbody" value="" placeholder="{{content}}" required="required">{{ content }}</textarea>
+				  </div>-->
+   
+</fieldset>
+{% endblock %}
+{% block sidebar %}
+{% for key,value in campos %}
+    Key : {{ key }}
+    Value : {{ value }}
+{% endfor %}
+<fieldset class="datos">
+{% for item in campos %}       
+<!--<p><input type="text" name='{{item}}' placeholder='{{item}}' value="" class="datos"/></p>-->
+{% endfor %}
+</fieldset>
+<!--<input type="submit" class="datos" value="Submit" />
+</form>-->
+{{ form_end(form) }}
+{% endblock %}

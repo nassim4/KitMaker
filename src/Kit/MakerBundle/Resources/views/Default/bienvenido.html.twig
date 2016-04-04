@@ -1,0 +1,26 @@
+{% extends 'KitMakerBundle::base.html.twig' %}
+
+{% block body %}
+<header>
+    
+</header>
+
+
+
+<fieldset>
+    <caption>{{ msg }}</caption>
+    <td>
+    	<ul>
+    		<li><a href="{{ path('kit_maker_homepage') }}" value="volver"><h3>Haz click para mandar un Kit nuevo</h3></a></li>
+    		
+    	</ul>
+    </td>
+   
+</fieldset>
+                    
+{#{form(form)}#}
+
+{% endblock %}
+{% block sidebar %}
+
+{% endblock %}

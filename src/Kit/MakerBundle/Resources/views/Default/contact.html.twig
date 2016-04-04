@@ -1,0 +1,33 @@
+{% extends 'KitMakerBundle::base.html.twig' %}
+
+{% block body %}
+<header>
+    <h1>Email Contact</h1>
+</header>
+
+
+<form action="{{ path('kit_maker_homepage') }}" method="post" {{ form_enctype(form) }} class="blogger">
+<fieldset>
+    
+    {{ form_errors(form) }}
+
+    {{ form_widget(form.name, {'attr': {'value': 'name'} }) }}
+    {{ form_widget(form.email, {'attr': {'value': 'nassim4@hotmail.de'} }) }}
+    {{ form_widget(form.subject, {'attr': {'value': 'bienvenido.'} }) }}
+    <textarea type="text" name="body"  class="blogger">{{ content }}</textarea>
+   
+</fieldset>
+{% endblock %}
+{% block sidebar %}
+{% for key,value in campos %}
+    Key : {{ key }}
+    Value : {{ value }}
+{% endfor %}
+<fieldset class="datos">
+{% for item in campos %}       
+<p><input type="text" name='{{item}}' placeholder='{{item}}' value="" class="datos"/></p>
+{% endfor %}
+</fieldset>
+<input type="submit" class="datos" value="Submit" />
+</form>
+{% endblock %}

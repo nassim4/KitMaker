@@ -1,0 +1,14 @@
+{# src/Kit/MakerBundle/Resources/views/base.html.twig #}
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('KitMaker/css/form.css') }}" type="text/css" rel="stylesheet" />
+    <link href="{{ asset('KitMaker/css/datos.css') }}" type="text/css" rel="stylesheet" />
+    <link href="{{ asset('KitMaker/css/background.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block sidebar %}
+
+    Sidebar content
+{% endblock %}

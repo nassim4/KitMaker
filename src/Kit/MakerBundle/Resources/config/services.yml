@@ -1,0 +1,20 @@
+services:
+#    kit_maker.example:
+#        class: Kit\MakerBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
+    kit_maker.gitlab:
+        class: Kit\MakerBundle\Util\Gitlab
+
+    kit_maker.generar_pdf:
+        class: Kit\MakerBundle\Util\GenerarPDF
+
+    kit_maker.bajar_pdf:
+        class: Kit\MakerBundle\Util\BajarPDF
+
+    kit_maker.sacarCampos_pdf:
+        class: Kit\MakerBundle\Util\SacarCampos
+        arguments: ["@session"]
+
+    kit_maker.mandarEmail:
+        class: Kit\MakerBundle\Util\MandarEmail
+        arguments: ["@mailer", "%irontec_mail_address%", "%destinatarios%"]

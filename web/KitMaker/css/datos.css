@@ -1,0 +1,6 @@
+form.datos { font-size: 10px; }
+fieldset.datos { margin-top: 54px;clear: left; margin-bottom: 10px; }
+form.datos input[type="text"],
+
+
+input[type="submit"] {  margin-top: 25px; width: 164px; line-height: 14px; height: 25px; }

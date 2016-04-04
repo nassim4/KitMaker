@@ -1,0 +1,17 @@
+kit_maker_homepage:
+    path:     /
+    defaults: { _controller: KitMakerBundle:Default:index }
+    requirements:
+        _method:  GET
+
+kit_maker_bienvenido:
+    pattern:  /bienvenido
+    defaults: { _controller: KitMakerBundle:Default:bienvenido }
+    requirements:
+        _method:  GET|POST
+
+kit_maker_generate:
+    pattern:  /generate
+    defaults: { _controller: KitMakerBundle:Default:generate }
+    requirements:
+        _method:  GET|POST

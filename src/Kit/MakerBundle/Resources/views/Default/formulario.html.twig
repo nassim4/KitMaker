@@ -1,0 +1,41 @@
+{% extends 'KitMakerBundle::base.html.twig' %}
+
+{% block body %}
+	{{ parent() }}
+	<fieldset>
+				
+				<caption>{{ msg }}</caption>
+				<form action="{{ path('kit_maker_bienvenido') }}" class="blogger" method="POST">
+				  <div class="blogger">				   
+				    <input type="text" class="form-control" id="username" name="_username" value="" placeholder="Nombre" required="required">
+				  </div>
+				  <div class="blogger">
+				    
+				    <input type="text" class="form-control" id="username" name="_useremail" value="" placeholder="email" required="required">
+				  </div>
+				  <div class="blogger">
+				    
+				    <input type="text" class="form-control" id="username" name="_usersubject" value="" placeholder="subject" required="required">
+				  </div>
+				  <div  class="blogger">
+				    
+				    <textarea type="text" class="blogger" id="_userbody" name="_userbody" value="" placeholder="{{content}}" required="required"></textarea>
+				  </div>
+
+				  
+
+	</fieldset>
+				  {% endblock %}
+
+				  {% block sidebar %}
+				  
+				  <fieldset class="datos">
+				  {% for item in campos %}       
+				  <p><input type="text" name='{{item}}' placeholder='{{item}}' value="" required="required" class="datos"/></p>
+				  {% endfor %}
+				  </fieldset>
+				  <!--<input type="hidden" name="_target_path" value="/index">-->
+				  <!--<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">-->
+				  <input type="submit" class="datos" value="enviar"></input>
+				  </form>
+				  {% endblock %}
